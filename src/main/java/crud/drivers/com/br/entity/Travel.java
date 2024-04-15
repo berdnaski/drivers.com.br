@@ -22,7 +22,7 @@ public class Travel {
     private int id;
 
     @Column(name = "drivers_id")
-    private int drivers_id;
+    private int driver;
 
     @Column(name = "origins")
     private String origin;
@@ -30,7 +30,8 @@ public class Travel {
     @Column(name = "arrivals")
     private String arrival;
 
-    private List<Travel> travels = new ArrayList<>();
+    @Column(name = "travels")
+    private String travel;
 
     @CreationTimestamp
     private Instant creationTimestamp;
