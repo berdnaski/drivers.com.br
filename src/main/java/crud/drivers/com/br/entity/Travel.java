@@ -8,6 +8,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_travels")
@@ -27,6 +29,8 @@ public class Travel {
 
     @Column(name = "arrivals")
     private String arrival;
+
+    private List<Travel> travels = new ArrayList<>();
 
     @CreationTimestamp
     private Instant creationTimestamp;
